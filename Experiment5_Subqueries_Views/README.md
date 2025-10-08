@@ -38,7 +38,7 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+-- ![Screenshot 2025-04-29 140920](https://github.com/user-attachments/assets/e9bb55a0-ef1c-49e5-9d77-9c147822d3f3)
 
 ```sql
 -- Paste your SQL code below for Question 1
