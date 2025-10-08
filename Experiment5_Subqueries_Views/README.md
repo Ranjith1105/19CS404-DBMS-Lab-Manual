@@ -38,123 +38,192 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+-- ![Screenshot 2025-04-29 140920](https://github.com/user-attachments/assets/e9bb55a0-ef1c-49e5-9d77-9c147822d3f3)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+-- SELECT * 
+FROM Grades g
+WHERE grade = (
+    SELECT MAX(grade)
+    FROM Grades
+    WHERE subject = g.subject
+);
+
 ```
 
 **Output:**
+![Screenshot 2025-04-29 140926](https://github.com/user-attachments/assets/82dfbc89-4071-41b5-9b0c-8b6b5dbd7ebd)
 
-![Output1](output.png)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- ![Screenshot 2025-04-29 141038](https://github.com/user-attachments/assets/93d0cd11-d5c2-4f23-b08b-4a9dcbef4e7d)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+-- SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
+FROM ORDERS o
+JOIN SALESMAN s ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York';
+
 ```
 
 **Output:**
+![Screenshot 2025-04-29 141048](https://github.com/user-attachments/assets/96d7ce09-5ca6-49cd-8b21-0bceb8072347)
 
-![Output2](output.png)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+-- ![Screenshot 2025-04-29 141156](https://github.com/user-attachments/assets/8cb24975-fdd1-4a13-a21a-0cf8680b04e0)
 
 ```sql
--- Paste your SQL code below for Question 3
+-- SELECT g.student_name, g.grade
+FROM GRADES g
+WHERE g.grade = (
+    SELECT MAX(g2.grade)
+    FROM GRADES g2
+    WHERE g2.subject = g.subject
+);
 ```
 
 **Output:**
+![Screenshot 2025-04-29 141202](https://github.com/user-attachments/assets/7b5b84f8-edda-4741-b13d-2b51ac4dfcb6)
 
-![Output3](output.png)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+-- ![Screenshot 2025-04-29 141354](https://github.com/user-attachments/assets/9ff0825e-9c67-4ffe-9e92-3f661c3ded5d)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+-- SELECT name
+FROM customer
+WHERE phone IN (
+    SELECT phone
+    FROM customer
+    GROUP BY phone
+    HAVING COUNT(*) = 1
+);
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+![Screenshot 2025-04-29 141359](https://github.com/user-attachments/assets/6df18253-6313-414f-a52a-e7c6230b5561)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+--![Screenshot 2025-04-29 141459](https://github.com/user-attachments/assets/1dc4420f-645f-40c7-a3ba-1c851cf9cb00)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+-- SELECT *
+FROM CUSTOMERS
+WHERE SALARY > 1500;
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+![Screenshot 2025-04-29 141505](https://github.com/user-attachments/assets/fe0157d8-3868-4632-b0c6-7bf311a43356)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+-- ![Screenshot 2025-04-29 141556](https://github.com/user-attachments/assets/7cb63ea6-499d-4ed3-bfc8-934ede81615b)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+-- SELECT s.salesman_id, s.name
+FROM salesman s
+JOIN customer c ON s.salesman_id = c.salesman_id
+GROUP BY s.salesman_id, s.name
+HAVING COUNT(c.customer_id) > 1;
+
 ```
 
 **Output:**
+![Screenshot 2025-04-29 141604](https://github.com/user-attachments/assets/16a84145-3969-4bde-9551-162d462d16f2)
 
-![Output6](output.png)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+-- ![Screenshot 2025-04-29 141644](https://github.com/user-attachments/assets/ff9b5962-abb0-47c6-bda0-1ac6f4e4120a)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+-- SELECT ord_no, purch_amt, ord_date, customer_id, salesman_id
+FROM orders
+WHERE purch_amt > (
+    SELECT AVG(purch_amt)
+    FROM orders
+    WHERE ord_date = '2012-10-10'
+);
 ```
 
 **Output:**
+![Screenshot 2025-04-29 141651](https://github.com/user-attachments/assets/ecb2e288-2a9c-461e-9d1b-da1eb324bb58)
 
-![Output7](output.png)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+-- ![Screenshot 2025-04-29 141746](https://github.com/user-attachments/assets/96314594-cec5-4bff-96ac-2fcdc0cbd80d)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+-- SELECT *
+FROM customer
+WHERE city <> (
+    SELECT city
+    FROM customer
+    WHERE id = (SELECT MAX(id) FROM customer)
+);
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+![Screenshot 2025-04-29 141758](https://github.com/user-attachments/assets/5e0d0b67-1a11-433a-aa99-6840a129c9c4)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+-- ![Screenshot 2025-04-29 141841](https://github.com/user-attachments/assets/84a903d4-efa6-46ff-9adb-e3ab75e99d54)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+--SELECT *
+FROM CUSTOMERS
+WHERE AGE < 30;
+
 ```
 
 **Output:**
 
-![Output9](output.png)
+![Screenshot 2025-04-29 141850](https://github.com/user-attachments/assets/cdd36191-66d0-48ff-8b73-b9e4541d5d86)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+-- ![Screenshot 2025-04-29 151446](https://github.com/user-attachments/assets/79dfb804-513e-4811-8595-3421250804bf)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+-- select medication_id, medication_name, dosage from Medications
+where dosage=(select max(dosage) from Medications)
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Screenshot 2025-04-29 151451](https://github.com/user-attachments/assets/e1d4d9ed-731c-4bc3-80b3-124471823ece)
+
 
 
 ## RESULT
