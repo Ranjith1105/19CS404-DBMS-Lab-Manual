@@ -213,6 +213,8 @@ WHERE
 
 ![Screenshot 2025-04-29 135954](https://github.com/user-attachments/assets/30bfdccc-5cf0-49cd-82fd-353e4e03c637)
 
+## GRADE
+<img width="1083" height="65" alt="image" src="https://github.com/user-attachments/assets/b27f3f16-d44d-4511-82f2-c1b42d780e0c" />
 
 
 ## RESULT
