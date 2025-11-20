@@ -224,6 +224,8 @@ where dosage=(select max(dosage) from Medications)
 
 ![Screenshot 2025-04-29 151451](https://github.com/user-attachments/assets/e1d4d9ed-731c-4bc3-80b3-124471823ece)
 
+## GRADE
+<img width="1179" height="74" alt="image" src="https://github.com/user-attachments/assets/635d80f0-1d24-4f91-bbc9-3dc22d92dbba" />
 
 
 ## RESULT
