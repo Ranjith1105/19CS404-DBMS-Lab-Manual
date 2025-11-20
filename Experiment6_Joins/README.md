@@ -305,6 +305,8 @@ JOIN
 
 ![Screenshot 2025-04-29 152922](https://github.com/user-attachments/assets/7f8e1354-169d-40f6-a772-01c3b80620dd)
 
+## GRADE
+<img width="1143" height="75" alt="image" src="https://github.com/user-attachments/assets/2d62e360-fcd6-417c-92a8-7aabb47cea85" />
 
 
 ## RESULT
