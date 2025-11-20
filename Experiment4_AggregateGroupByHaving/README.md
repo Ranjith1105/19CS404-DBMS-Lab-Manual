@@ -197,6 +197,8 @@ from orders
 
 ![Screenshot 2025-04-29 133004](https://github.com/user-attachments/assets/a87afd7f-b9d4-45fa-a6ea-86cd136bd9fd)
 
+## GRADE
+<img width="1101" height="99" alt="image" src="https://github.com/user-attachments/assets/11f13e39-99f7-48af-a4f0-00f6a2030bb8" />
 
 
 ## RESULT
