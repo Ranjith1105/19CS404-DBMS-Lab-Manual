@@ -294,6 +294,8 @@ foreign key(DepartmentID) references Departments(DepartmentID)
 ![image](https://github.com/user-attachments/assets/8631abbc-db12-4fe7-bbf9-06bffaa06c5a)
 
 
+## GRADE
+<img width="1118" height="81" alt="image" src="https://github.com/user-attachments/assets/0561e043-b446-4469-80e7-3ccd5fba2d12" />
 
 
 ## RESULT
